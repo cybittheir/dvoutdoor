@@ -1,0 +1,13 @@
+*.jpg
+*/pics/*
+*/export/files/*
+*/export/tmp/*
+*/export copy/*
+*/bConfig.php
+*/dbConfig.php
+*/adm/*
+*/tgmedia/*
+*.txt
+*.php.inc
+*.html
+*_db.php

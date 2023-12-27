@@ -1,0 +1,26 @@
+#bottom_fix {
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 5px; /* Поля вокруг текста */
+    color: #000; /* Цвет текста */
+}
+#bottom_white {
+    position: fixed; /* Фиксированное положение */
+    left: 0px; bottom: 30px; /* Левый нижний угол */
+    padding: 5px; /* Поля вокруг текста */
+    padding-left: 10px; /* Поля вокруг текста */
+    background: #FFF; /* Цвет фона */
+    color: #000; /* Цвет текста */
+    width: 100%; /*Ширина слоя */
+    height: 20px;
+    z-index:99;
+}
+#bottom_color {
+    position: fixed; /* Фиксированное положение */
+    left: 0px; bottom: 0px; /* Левый нижний угол */
+    padding: 5px; /* Поля вокруг текста */
+    background: #DD9; /* Цвет фона */
+    color: #000; /* Цвет текста */
+    width: 100%; /*Ширина слоя */
+    height: 20px;
+    z-index:99;
+}

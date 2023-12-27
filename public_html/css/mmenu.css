@@ -1,0 +1,314 @@
+#navmain, #navmain ul, #navmain li {
+  display: inline-block;
+  font-size: 9pt;
+  color: #DDF;
+  top: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+#navmain, #navmain ul {
+  background: rgb(0,0,0);
+}
+#navmain { /* подменю перемещается относительно меню */
+  position: relative;
+  display: table;
+/*  width: 100%; */
+}
+#navmain ul { /* подменю находится вне потока */
+  position: absolute;
+  z-index: 5;
+  padding: 0px; 
+  display: none; 
+  background: rgba(0,0,0,0.8);
+}
+#navmain li span { /* подменю находится вне потока */
+  position: absolute;
+  z-index: 5;
+  padding: 0px; 
+  left: 0px;
+  top: 30px;
+ width:100%;
+  display: none;
+  text-align: left;
+  background: rgba(0,0,0,0.8);
+}
+#navmain li span.sel {
+  display: inline-block;
+  z-index: 1;
+  background: rgb(255,255,255);
+}
+#navmain li:hover{ 
+  display: inline-block;
+  z-index: 7;
+  background: rgb(208,208,144);
+}
+#navmain li:hover span { 
+  display: inline-block;
+  background: rgb(208,208,144);
+}
+#navmain li.sel span { 
+  display: inline-block;
+  background: rgb(255,255,255);
+}
+#navmain li {
+  display: table-cell;
+  text-align: center;
+}
+#navmain ul li {
+  display: block;
+  color: #FFF;
+  text-align: left;
+}
+#navmain .right { /* последнее подменю будет расширяться справа налево */
+  direction: rtl;
+}
+#navmain .right ul { /* для IE, решение найдено случайно, где связь ??? */
+  right: 0;
+}
+#navmain .right li { /* последнее подменю будет расширяться справа налево, но не пункты последнего подменю */
+  direction: ltr;
+}
+#navmain span a {
+  display: inline-block;
+  font-weight:bold; 
+  padding: 8px; 
+  color: #000;
+  text-decoration: none;
+}
+#navmain span a.sel {
+  color: #A00;
+}
+#navmain span a:hover {
+  color: #A00;
+  text-decoration: none;
+  background-color: #D0D090;
+}
+#navmain a {
+  display: inline-block;
+  padding: 8px 12px 8px 12px; 
+  color: #FFF;
+  text-decoration: none;
+}
+#navmain a.sel {
+  color: #000;
+  background-color: #FFF;
+  margin: 0px;
+  text-decoration: none;
+  padding: 8px 8px 8px 8px; 
+}
+#navmain a.sel:hover {
+  background-color: #D0D090;
+  text-decoration: none;
+}
+#navmain a:hover {
+  color: #FFF;
+  background-color: #D0D090;
+}
+#navmain ul a {
+  padding: 0px 0px;
+}
+#navmain li:hover {
+  color: #FFF;
+}
+/*  =======================================  */
+#navprof, #navprof ul, #navprof li {
+  font-size: 8pt;
+  color: #DDF;
+  top: 0px;
+  margin: 0;
+  padding: 5px 10px 1px 0px;
+}
+#navprof, #navprof ul {
+  background: rgb(100,0,0);
+}
+#navprof { /* подменю перемещается относительно меню */
+  position: relative;
+  display: table;
+  width: 100%; 
+}
+#navprof ul { /* подменю находится вне потока */
+  position: absolute;
+  z-index: 5;
+  padding: 0px 0px 10px 0px; 
+  background: rgba(100,0,0,0.8);
+  display: none; 
+}
+#navprof li:hover ul { 
+  display: block;
+}
+#navprof li {
+  display: table-cell;
+  text-align: right;
+}
+#navprof ul li {
+  display: block;
+  padding: 5px 10px 0px 15px; 
+  color: #FFF;
+  text-align: left;
+}
+#navprof .right { /* последнее подменю будет расширяться справа налево */
+  direction: rtl;
+}
+#navprof .right ul { /* для IE, решение найдено случайно, где связь ??? */
+  right: 0;
+}
+#navprof .right li { /* последнее подменю будет расширяться справа налево, но не пункты последнего подменю */
+  direction: ltr;
+}
+#navprof a {
+  display: block;
+  color: #DDF;
+  text-decoration: none;
+}
+#navprof a:hover {
+  color: #FFF;
+}
+#navprof ul a {
+  padding: 5px 5px;
+}
+#navprof li:hover {
+  color: #FFF;
+/*  background: rgb(100,100,100); */
+}
+
+#nav{
+	font-family: "Verdana", "Arial", Sans-Serif;
+	display: inline-block;
+	color: #FFF;
+	font-size:10pt;
+	position: relative;
+	background:#000;
+	float:right;
+	height:20px;
+	width:230px;
+	padding: 10px;
+	text-align:right;
+	list-style:none;
+	font-weight:bold; 
+	margin-bottom:1px;
+}
+#navi, #navi ul, #navili {
+	margin: 0;
+	padding: 0;
+}
+
+#navi {
+	font-family: "Verdana", "Arial", Sans-Serif;
+	display: inline-block;
+	color: #FFF;
+	font-size:10pt;
+	position: relative;
+	background:#000;
+	float:right;
+	height:20px;
+	width:230px;
+	padding: 10px;
+	text-align:right;
+	list-style:none;
+	font-weight:bold; 
+	margin-bottom:1px;
+}
+#navi ul{
+	list-style:none;
+	font-size: 10px;
+	position:absolute; 
+/*	left:-9999px;  Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+/*	opacity:0; /* Устанавливаем начальное состояние прозрачности */
+/*	-webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+}
+#navi li{
+	float:left;
+	width:80; 
+	margin-right:0px;
+	position:relative;
+	display:block;
+}
+#navi li a{
+	display:block;
+	padding:0px;
+    	color: #669;
+	background:#ff00ff;
+	text-decoration:none;
+}
+#nav li{
+	float:left;
+	position:relative;
+	display:block;
+}
+#nav li a{
+	display:block;
+	padding:0px;
+    	color: #669;
+	background:#ff00ff;
+	text-decoration:none;
+}
+#nav li a:hover{
+    	color: #669;
+	background:#00ffff;
+	text-decoration:underline;
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+#nav ul{
+	list-style:none;
+	font-size: 10px;
+	position:absolute; 
+/*	left:-9999px;  Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+	opacity:0; /* Устанавливаем начальное состояние прозрачности */
+	-webkit-transition:0.25s linear opacity; /* В Webkit выпадающие пункты будут проявляться */
+}
+#nav ul li{
+	padding-top:1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+	float:none;
+}
+#nav ul a{
+	white-space:nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+	display:block;
+}
+#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+	left:-40; /* Приносим его обратно на экран, когда нужно */
+	opacity:1; /* Делаем непрозрачным */
+}
+#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+	background:#ff0000;
+/*	background:rgba(107,12,54,0.75);  Выглядит полупрозрачным */
+	text-decoration:underline;
+}
+#nav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+	text-decoration:none;
+	-webkit-transition:-webkit-transform 0.075s linear;
+}
+#nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+	background:#eeeeee;
+	text-decoration:underline;
+	-moz-transform:scale(1.05);
+	-webkit-transform:scale(1.05);
+}
+#top_menu
+{
+	font-family: "Verdana", "Arial", Sans-Serif;
+	background: none repeat scroll 0% 0% #FFF;
+	width: 100%;
+	min-width: 1005px;
+	height: 100px;
+	border: 0px none;
+}
+#top_menu_logo
+{
+	display: inline-block;
+	position: relative;
+	background:#EEA;
+	float:left;
+	width:120px;
+	height:100px;
+}
+#top_menu_null
+{
+	display: inline-block;
+	position: relative;
+	background: none repeat scroll 0% 0% #640000;
+	float: left;
+	width: 10px;
+	height: 34px;
+}
+

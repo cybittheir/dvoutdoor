@@ -1,0 +1,13 @@
+
+# Various rewrite rules.
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Rewrite URLs of the form 'x' to the form 'index.php?q=x'.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} !=/favicon.ico
+  RewriteRule ^(.*)$ /?q=$1 [L,QSA]
+</IfModule>
+
+# $Id: .htaccess,v 1.90.2.3 2008/12/10 20:04:08 goba Exp $
